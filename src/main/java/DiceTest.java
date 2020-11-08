@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 
@@ -6,20 +7,18 @@ public class DiceTest {
 
 
     @Test
-    public void rollDiceTest() {
-        //Given
-        Dice dice = new Dice();
-        Integer expected = null;
+    public void rollAndSumTest() {
+        // given
+        Integer numberOfDie = 1;
+        Integer numberOfFaces = 6;
+        Dice dice = new Dice(numberOfDie, numberOfFaces);
 
-        //When
-        dice.roll();
-//        Integer actual = dice.getValueOfRoll();
-//        Boolean doesNotExceed6 = actual <= 6;
-//        Boolean isMoreThan1 = actual > 0;
+        // when
+        Integer sum = dice.rollAndSum();
 
-        //Then
-//        Assert.assertEquals(expected, actual, delta)
-
+        // then
+        Assert.assertTrue(sum >= dice.getRollMin());
+        Assert.assertTrue(sum <= dice.getRollMax());
 
     }
 
