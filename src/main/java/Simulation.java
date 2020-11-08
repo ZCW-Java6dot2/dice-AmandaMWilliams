@@ -1,5 +1,3 @@
-import java.security.PrivateKey;
-
 public class Simulation {
     private Integer numberOfDie;
     private Integer numberOfTosses;
@@ -26,5 +24,4 @@ public class Simulation {
         double percentage = ratio * 100;
         return percentage;
     }
-
 }
