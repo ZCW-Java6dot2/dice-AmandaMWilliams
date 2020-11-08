@@ -1,14 +1,19 @@
+import java.util.Random;
+
+
 public class Dice {
 
-// need a constructor for what a dice looks like (6 faces, 1-6 values on each face
     // need a method to roll dice
-    // need something to determine how many dice to roll
+    // need something to determine how many dice to roll (n)
 
-    //Die Constructor
-    private Integer faceValue;
+    private Integer numberOfFaces;
+    private Integer currentFaceValue;
 
-    public static void roll(){
-        //pick a random value between 1 - 6
+
+    public void roll(){
+        Random roll = new Random() ;   //pick a random value between 1 - 6
+        int result = roll.nextInt(6);  // random gives a result between 0 and 5
+        result += 1 ; // result is now between 1 and 6
     }
 
 
