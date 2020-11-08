@@ -13,13 +13,13 @@ public class Bin {
     public Integer getDiceSumHeld() {
         return diceSumHeld;
     }
-    public Integer numberOfOccurrences(){
+    public Integer getNumberOfOccurrences(){
         return numberOfOccurrences;
     }
 
     //Mutator
-    public Integer increment(){
-        return numberOfOccurrences++;
+    public void increment(){
+        numberOfOccurrences++;
     }
 }
 

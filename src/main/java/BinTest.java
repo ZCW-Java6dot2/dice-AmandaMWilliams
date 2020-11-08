@@ -15,28 +15,40 @@ public class BinTest {
 
         //Then
         Assert.assertEquals(expected, actual);
-    }
 
-    @Test
-    public void getDiceSumHeldTest() {
-        //Given
-        //When
-        //Then
-    }
-
-    @Test
-    public void numberOfOccurrencesTest() {
-        //Given
-        //When
-        //Then
     }
 
     @Test
     public void incrementTest() {
         //Given
+        Bin bin = new Bin(7);
+        Integer expected = 1;
+
 
         //When
+        bin.increment();
+        Integer actual = bin.getNumberOfOccurrences();
+
+
         //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void incrementTest2() {
+        //Given
+        Bin bin = new Bin(7);
+        Integer expected = 2;
+
+
+        //When
+        bin.increment();
+        bin.increment();
+        Integer actual = bin.getNumberOfOccurrences();
+
+
+        //Then
+        Assert.assertEquals(expected, actual);
     }
 
 }
